@@ -19,6 +19,10 @@ const useStyles = makeStyles(() => ({
     background:
       'radial-gradient(50% 50% at 50% 50%, rgba(94, 25, 244, 0.33) 0%, rgba(94, 25, 244, 0.76) 100%)',
   },
+  container: {
+    width: '85%',
+    margin: '1.0rem auto',
+  },
 }));
 
 function App() {
@@ -27,24 +31,26 @@ function App() {
   return (
     <Router>
       <Box className={classes.root}>
-        <NavBar />
-        <Switch>
-          <Route path='/landing'>
-            <Landing />
-          </Route>
-          <Route path='/pricing'>
-            <Pricing />
-          </Route>
-          <Route path='/mission'>
-            <Mission />
-          </Route>
-          <Route path='/showcase'>
-            <Showcase />
-          </Route>
-          <Route path='/404'>
-            <PageNotFound />
-          </Route>
-        </Switch>
+        <Box className={classes.container}>
+          <NavBar />
+          <Switch>
+            <Route path='/landing'>
+              <Landing />
+            </Route>
+            <Route path='/pricing'>
+              <Pricing />
+            </Route>
+            <Route path='/mission'>
+              <Mission />
+            </Route>
+            <Route path='/showcase'>
+              <Showcase />
+            </Route>
+            <Route path='/404'>
+              <PageNotFound />
+            </Route>
+          </Switch>
+        </Box>
       </Box>
     </Router>
   );
