@@ -13,9 +13,13 @@ const useStyles = makeStyles(() => ({
   inverseIcon: {
     color: brandColors.pureWhite,
   },
+  inverseMenuItem: {
+    backgroundColor: brandColors.purple,
+    color: brandColors.pureWhite,
+  },
 }));
 
-const HamburgerMenu = () => {
+const SmallerHamburgerMenu = () => {
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -48,9 +52,12 @@ const HamburgerMenu = () => {
         <MenuItem onClick={handleClose}>Packages</MenuItem>
         <MenuItem onClick={handleClose}>Showcase</MenuItem>
         <MenuItem onClick={handleClose}>FAQ</MenuItem>
+        <MenuItem onClick={handleClose} className={classes.inverseMenuItem}>
+          Get Your Site
+        </MenuItem>
       </Menu>
     </Box>
   );
 };
 
-export default HamburgerMenu;
+export default SmallerHamburgerMenu;

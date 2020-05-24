@@ -5,6 +5,7 @@ import { brandColors } from '../constants/brand';
 import CustomButton from './CustomButton';
 import SmallerCustomButton from './SmallerCustomButton';
 import HamburgerMenu from './HamburgerMenu';
+import SmallerHamburgerMenu from './SmallerHamburgerMenu';
 
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
@@ -66,15 +67,20 @@ const NavBar = () => {
         </Hidden>
         <Hidden lgUp>
           <Grid container justify='flex-end' alignItems='center' spacing={2}>
-            <Grid item>
-              <HamburgerMenu />
-            </Grid>
+            <Hidden xsDown>
+              <Grid item>
+                <HamburgerMenu />
+              </Grid>
+            </Hidden>
+            <Hidden smUp>
+              <SmallerHamburgerMenu />
+            </Hidden>
             <Hidden smDown>
               <Grid item>
                 <CustomButton buttonText='Get Your Site'></CustomButton>
               </Grid>
             </Hidden>
-            <Hidden mdUp>
+            <Hidden mdUp xsDown>
               <Grid item>
                 <SmallerCustomButton buttonText='Get Your Site'></SmallerCustomButton>
               </Grid>
