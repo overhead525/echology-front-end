@@ -7,10 +7,26 @@ import PageNotFound from './pages/PageNotFound';
 import Pricing from './pages/Pricing';
 import Showcase from './pages/Showcase';
 
+import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
+
+const useStyles = makeStyles(() => ({
+  root: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    width: '100%',
+    background:
+      'radial-gradient(50% 50% at 50% 50%, rgba(94, 25, 244, 0.33) 0%, rgba(94, 25, 244, 0.76) 100%)',
+  },
+}));
+
 function App() {
+  const classes = useStyles();
+
   return (
     <Router>
-      <div>
+      <Box className={classes.root}>
         <NavBar />
         <Switch>
           <Route path='/landing'>
@@ -29,7 +45,7 @@ function App() {
             <PageNotFound />
           </Route>
         </Switch>
-      </div>
+      </Box>
     </Router>
   );
 }
