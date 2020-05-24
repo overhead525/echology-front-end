@@ -24,13 +24,14 @@ const useStyles = makeStyles(() => ({
 
 interface customButtonProps {
   buttonText: string;
+  linkTo: string;
 }
 
 const SmallerCustomButon = (props: customButtonProps) => {
   const classes = useStyles();
 
   return (
-    <Link to='/landing' className={classes.linkReset}>
+    <Link to={props.linkTo} className={classes.linkReset}>
       <div className={classes.root}>{props.buttonText}</div>
     </Link>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { brandColors } from '../constants/brand';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -15,6 +16,14 @@ const useStyles = makeStyles(() => ({
   },
   inverseMenuItem: {
     backgroundColor: brandColors.purple,
+    color: brandColors.pureWhite,
+  },
+  linkReset: {
+    textDecoration: 'none',
+    color: brandColors.black,
+  },
+  linkResetAlternate: {
+    textDecoration: 'none',
     color: brandColors.pureWhite,
   },
 }));
@@ -48,12 +57,31 @@ const SmallerHamburgerMenu = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Our Mission</MenuItem>
-        <MenuItem onClick={handleClose}>Packages</MenuItem>
-        <MenuItem onClick={handleClose}>Showcase</MenuItem>
-        <MenuItem onClick={handleClose}>FAQ</MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link className={classes.linkReset} to='/mission'>
+            Our Mission
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link className={classes.linkReset} to='/pricing'>
+            Our Packages
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link className={classes.linkReset} to='/showcase'>
+            Showcase
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          {/* TODO: Route FAQ to FAQ Page...Need to create one */}
+          <Link className={classes.linkReset} to='/landing'>
+            FAQ
+          </Link>
+        </MenuItem>
         <MenuItem onClick={handleClose} className={classes.inverseMenuItem}>
-          Get Your Site
+          <Link className={classes.linkResetAlternate} to='/pricing'>
+            Get Your Site
+          </Link>
         </MenuItem>
       </Menu>
     </Box>

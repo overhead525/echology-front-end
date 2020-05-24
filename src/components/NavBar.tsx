@@ -61,7 +61,10 @@ const NavBar = () => {
               <h4 className={classes.link}>FAQ</h4>
             </Grid>
             <Grid item>
-              <CustomButton buttonText='Get Your Site'></CustomButton>
+              <CustomButton
+                linkTo='/pricing'
+                buttonText='Get Your Site'
+              ></CustomButton>
             </Grid>
           </Grid>
         </Hidden>
@@ -77,12 +80,18 @@ const NavBar = () => {
             </Hidden>
             <Hidden smDown>
               <Grid item>
-                <CustomButton buttonText='Get Your Site'></CustomButton>
+                <CustomButton
+                  linkTo='/pricing'
+                  buttonText='Get Your Site'
+                ></CustomButton>
               </Grid>
             </Hidden>
             <Hidden mdUp xsDown>
               <Grid item>
-                <SmallerCustomButton buttonText='Get Your Site'></SmallerCustomButton>
+                <SmallerCustomButton
+                  linkTo='/pricing'
+                  buttonText='Get Your Site'
+                ></SmallerCustomButton>
               </Grid>
             </Hidden>
           </Grid>
