@@ -27,7 +27,7 @@ const useStyles = makeStyles(() => ({
     marginBottom: '1.6rem',
   },
   heroImage: {
-    width: '85%',
+    width: '70%',
     height: 'auto',
   },
   centerItems: {
@@ -55,6 +55,9 @@ const useStyles = makeStyles(() => ({
   extraTopMargin: {
     marginTop: '1.15rem',
   },
+  fullBottomMargin: {
+    marginBottom: '3.0rem',
+  },
   extraBottomMargin: {
     marginBottom: '1.5rem',
   },
@@ -66,6 +69,9 @@ const useStyles = makeStyles(() => ({
   },
   width70: {
     maxWidth: '70%',
+  },
+  width60: {
+    maxWidth: '60%',
   },
   width50: {
     maxWidth: '50%',
@@ -90,7 +96,7 @@ const LandingMobileScreens = () => {
 
   return (
     <Grid container direction='column' justify='center' alignItems='center'>
-      <Grid item className={(classes.width85, classes.extraTopMargin)}>
+      <Grid item className={classes.extraTopMargin}>
         <Typography
           variant='h3'
           gutterBottom
@@ -101,12 +107,7 @@ const LandingMobileScreens = () => {
           Site Today
         </Typography>
       </Grid>
-      <Grid
-        item
-        className={
-          (classes.width85, classes.tinyBottomMargin, classes.centerItems)
-        }
-      >
+      <Grid item className={classes.centerItems}>
         <img src={heroImage} alt='Hero' className={classes.heroImage} />
       </Grid>
       <Grid item>

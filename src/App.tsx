@@ -10,6 +10,8 @@ import Showcase from './pages/Showcase';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 
+import './App.css';
+
 const useStyles = makeStyles(() => ({
   root: {
     position: 'absolute',
@@ -17,6 +19,7 @@ const useStyles = makeStyles(() => ({
     width: '100%',
     background:
       'radial-gradient(50% 50% at 50% 50%, rgba(94, 25, 244, 0.33) 0%, rgba(94, 25, 244, 0.76) 100%)',
+    fontFamily: "'Open Sans', sans-serif",
   },
   container: {
     width: '85%',
