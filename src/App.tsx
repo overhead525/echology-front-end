@@ -14,16 +14,17 @@ import './App.css';
 
 const useStyles = makeStyles(() => ({
   root: {
-    position: 'absolute',
+    position: 'relative',
     top: 0,
     width: '100%',
+    minHeight: '100vh',
     background:
       'radial-gradient(50% 50% at 50% 50%, rgba(94, 25, 244, 0.33) 0%, rgba(94, 25, 244, 0.76) 100%)',
     fontFamily: "'Open Sans', sans-serif",
   },
   container: {
     width: '85%',
-    margin: '1.0rem auto',
+    margin: '0 auto',
   },
 }));
 
