@@ -18,6 +18,7 @@ const useStyles = makeStyles(() => ({
     width: '100%',
     background:
       'radial-gradient(50% 50% at 50% 50%, rgba(94, 25, 244, 0.33) 0%, rgba(94, 25, 244, 0.76) 100%)',
+    backgroundAttachment: 'fixed',
   },
   container: {
     width: '85%',
