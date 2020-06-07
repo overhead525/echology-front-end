@@ -74,7 +74,7 @@ const SmallerHamburgerMenu = () => {
         </MenuItem>
         <MenuItem onClick={handleClose}>
           {/* TODO: Route FAQ to FAQ Page...Need to create one */}
-          <Link className={classes.linkReset} to='/landing'>
+          <Link className={classes.linkReset} to='/'>
             FAQ
           </Link>
         </MenuItem>
