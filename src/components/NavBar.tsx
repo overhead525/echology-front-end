@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../echology_logo.png';
 import { brandColors } from '../constants/brand';
 
@@ -24,6 +25,7 @@ const useStyles = makeStyles(() => ({
   },
   link: {
     color: brandColors.pureWhite,
+    textDecoration: 'none',
   },
   getSiteButton: {
     backgroundColor: brandColors.purple,
@@ -49,16 +51,24 @@ const NavBar = () => {
         <Hidden mdDown>
           <Grid container justify='space-between' alignItems='center'>
             <Grid item>
-              <h4 className={classes.link}>Our Mission</h4>
+              <Link to='/mission' className={classes.link}>
+                <h4>Our Mission</h4>
+              </Link>
             </Grid>
             <Grid item>
-              <h4 className={classes.link}>Packages</h4>
+              <Link to='/pricing' className={classes.link}>
+                <h4>Packages</h4>
+              </Link>
             </Grid>
             <Grid item>
-              <h4 className={classes.link}>Showcase</h4>
+              <Link to='/showcase' className={classes.link}>
+                <h4>Showcase</h4>
+              </Link>
             </Grid>
             <Grid item>
-              <h4 className={classes.link}>FAQ</h4>
+              <Link to='/' className={classes.link}>
+                <h4>FAQ</h4>
+              </Link>
             </Grid>
             <Grid item>
               <CustomButton
