@@ -14,7 +14,6 @@ const useStyles = makeStyles(() => ({
   root: {
     position: 'relative',
     top: 0,
-    bottom: 0,
     width: '100%',
     minHeight: '100vh',
     background:
