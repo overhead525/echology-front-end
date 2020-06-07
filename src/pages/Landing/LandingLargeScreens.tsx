@@ -51,6 +51,18 @@ const useStyles = makeStyles(() => ({
     padding: '0.5rem',
     color: brandColors.pureWhite,
   },
+  width85: {
+    maxWidth: '85%',
+  },
+  width70: {
+    maxWidth: '70%',
+  },
+  width50: {
+    maxWidth: '50%',
+  },
+  width30: {
+    maxWidth: '30%',
+  },
 }));
 
 const LandingLargeScreens = () => {
