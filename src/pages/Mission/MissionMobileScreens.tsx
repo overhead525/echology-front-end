@@ -22,15 +22,17 @@ const useStyles = makeStyles({
   },
   bodyText: {
     color: brandColors.pureWhite,
+    maxWidth: '75%',
+    margin: 'auto',
   },
   highlighted: {
     color: brandColors.yellow,
   },
   leftQuoteBlock: {
-    height: '5rem',
+    position: 'relative',
+    height: '90%',
     width: '4px',
     backgroundColor: brandColors.yellow,
-    position: 'absolute',
   },
   leftQuoteText: {
     fontWeight: 'bold',
@@ -45,9 +47,14 @@ const useStyles = makeStyles({
     marginBottom: '1.5rem',
   },
   secondBody: {
+    marginTop: '2.0rem',
     marginBottom: '3.7rem',
+    maxWidth: '75%',
+    margin: 'auto',
+    color: brandColors.pureWhite,
   },
   rightImage: {
+    marginTop: '2.5rem',
     marginBottom: '3.5rem',
     textAlign: 'center',
     width: '60%',
@@ -68,15 +75,13 @@ const MissionMobileScreens = () => {
   return (
     <Grid container direction='column' justify='center' alignItems='center'>
       <Grid item>
-        <Typography className={classes.bigText}>
-          Our
-          <br />
-          Mission
+        <Typography className={classes.bigText} align='center'>
+          Our Mission
           <br />& Vision
         </Typography>
       </Grid>
       <Grid item>
-        <Typography>
+        <Typography className={classes.bodyText}>
           We believe that{' '}
           <span className={classes.highlighted}>HAVING A WEBSITE</span> is a{' '}
           <span className={classes.highlighted}>GIVEN RIGHT</span> to{' '}
@@ -95,7 +100,7 @@ const MissionMobileScreens = () => {
         />
       </Grid>
       <Grid item>
-        <Typography>
+        <Typography className={classes.bodyText}>
           We <span className={classes.highlighted}>PRIORITIZE</span> getting you{' '}
           <span className={classes.highlighted}>INTO THE MARKETPLACE</span> as{' '}
           <span className={classes.highlighted}>SOON</span> as possible. That’s
@@ -107,7 +112,7 @@ const MissionMobileScreens = () => {
           <span className={classes.highlighted}>START GETTING FEEDBACK</span>.
         </Typography>
       </Grid>
-      <Grid item>
+      <Grid item className={classes.secondBody}>
         <Typography className={classes.leadText}>
           In the words of our founder:
         </Typography>
