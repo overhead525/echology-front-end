@@ -11,8 +11,8 @@ import missionImage from '../../missionImage.png';
 const useStyles = makeStyles({
   bigText: {
     fontWeight: 900,
-    fontSize: '6.0rem',
-    lineHeight: '6.0rem',
+    fontSize: '5.0rem',
+    lineHeight: '5.0rem',
     color: brandColors.yellow,
     marginTop: '5.5rem',
     marginBottom: '4.0rem',

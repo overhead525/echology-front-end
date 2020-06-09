@@ -12,8 +12,8 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(() => ({
   title: {
     color: brandColors.pureWhite,
-    marginTop: '3rem',
-    marginBottom: '2rem',
+    margin: '3rem auto 2rem auto',
+    maxWidth: '100%',
   },
   checkoutButton: {
     marginTop: '3rem',
@@ -26,7 +26,7 @@ const Pricing = () => {
   return (
     <Box>
       <Grid container direction='column' alignItems='center'>
-        <Typography variant='h4' className={classes.title}>
+        <Typography variant='h4' className={classes.title} align='center'>
           <b>Choose Your Package</b>
         </Typography>
       </Grid>

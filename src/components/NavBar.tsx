@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../echology_logo.png';
 import { brandColors } from '../constants/brand';
-import { Link } from 'react-router-dom';
 
 import CustomButton from './CustomButton';
 import SmallerCustomButton from './SmallerCustomButton';

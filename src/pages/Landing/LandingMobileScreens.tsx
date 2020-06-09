@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -32,6 +33,9 @@ const useStyles = makeStyles(() => ({
   heroImage: {
     width: '70%',
     height: 'auto',
+  },
+  customDivider: {
+    margin: '2rem 0',
   },
   centerItems: {
     textAlign: 'center',
@@ -141,12 +145,21 @@ const LandingMobileScreens = () => {
             15% Off Your Next Order
           </DialogTitle>
           <DialogContent>
+            <DialogContentText>What's your first name?</DialogContentText>
+            <TextField
+              autoFocus
+              margin='dense'
+              id='name'
+              label='Name'
+              type='text'
+              fullWidth
+            />
+            <Box className={classes.customDivider} />
             <DialogContentText>
               Where should we send your coupon code? We hate spam and promise
               email you respectfully.
             </DialogContentText>
             <TextField
-              autoFocus
               margin='dense'
               id='name'
               label='Email Address'
