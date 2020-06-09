@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../echology_logo.png';
 import { brandColors } from '../constants/brand';
+import { Link } from 'react-router-dom';
 
 import CustomButton from './CustomButton';
 import SmallerCustomButton from './SmallerCustomButton';
@@ -15,6 +16,7 @@ const useStyles = makeStyles(() => ({
   gridContainer: {
     height: '9.5%',
     top: '1.6%',
+    paddingTop: '1.0rem',
   },
   brand: {
     width: '80px',
@@ -24,6 +26,7 @@ const useStyles = makeStyles(() => ({
   },
   link: {
     color: brandColors.pureWhite,
+    textDecoration: 'none',
   },
   getSiteButton: {
     backgroundColor: brandColors.purple,
@@ -36,7 +39,7 @@ const NavBar = () => {
 
   return (
     <Grid container className={classes.gridContainer} alignItems='center'>
-      <Grid item xs={6}>
+      <Grid item xs={8}>
         <Hidden smDown>
           <img src={logo} alt='Logo' className={classes.brand} />
         </Hidden>
@@ -45,21 +48,27 @@ const NavBar = () => {
         </Hidden>
       </Grid>
 
-      <Grid item xs={6}>
+      <Grid item xs={4}>
         <Hidden mdDown>
           <Grid container justify='space-between' alignItems='center'>
             <Grid item>
-              <h4 className={classes.link}>Our Mission</h4>
+              <Link to='/mission' className={classes.link}>
+                <h4>Our Mission</h4>
+              </Link>
             </Grid>
             <Grid item>
-              <h4 className={classes.link}>Packages</h4>
+              <Link to='/pricing' className={classes.link}>
+                <h4>Packages</h4>
+              </Link>
             </Grid>
+            {/*
             <Grid item>
               <h4 className={classes.link}>Showcase</h4>
             </Grid>
             <Grid item>
               <h4 className={classes.link}>FAQ</h4>
             </Grid>
+            */}
             <Grid item>
               <CustomButton
                 linkTo='/pricing'
