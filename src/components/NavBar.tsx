@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../echology_logo.png';
 import { brandColors } from '../constants/brand';
+import { Link } from 'react-router-dom';
 
 import CustomButton from './CustomButton';
 import SmallerCustomButton from './SmallerCustomButton';
@@ -16,6 +17,7 @@ const useStyles = makeStyles(() => ({
   gridContainer: {
     height: '9.5%',
     top: '1.6%',
+    paddingTop: '1.0rem',
   },
   brand: {
     width: '80px',
@@ -38,7 +40,7 @@ const NavBar = () => {
 
   return (
     <Grid container className={classes.gridContainer} alignItems='center'>
-      <Grid item xs={6}>
+      <Grid item xs={8}>
         <Hidden smDown>
           <img src={logo} alt='Logo' className={classes.brand} />
         </Hidden>
@@ -47,7 +49,7 @@ const NavBar = () => {
         </Hidden>
       </Grid>
 
-      <Grid item xs={6}>
+      <Grid item xs={4}>
         <Hidden mdDown>
           <Grid container justify='space-between' alignItems='center'>
             <Grid item>
@@ -60,6 +62,7 @@ const NavBar = () => {
                 <h4>Packages</h4>
               </Link>
             </Grid>
+            {/*
             <Grid item>
               <Link to='/showcase' className={classes.link}>
                 <h4>Showcase</h4>
@@ -70,6 +73,7 @@ const NavBar = () => {
                 <h4>FAQ</h4>
               </Link>
             </Grid>
+            */}
             <Grid item>
               <CustomButton
                 linkTo='/pricing'

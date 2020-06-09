@@ -25,6 +25,9 @@ const useStyles = makeStyles(() => ({
   bodyText: {
     color: brandColors.pureWhite,
     marginBottom: '1.6rem',
+    marginTop: '1.6rem',
+    maxWidth: '65%',
+    margin: 'auto',
   },
   heroImage: {
     width: '70%',

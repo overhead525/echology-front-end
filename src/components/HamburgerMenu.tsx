@@ -59,17 +59,18 @@ const HamburgerMenu = () => {
             Our Packages
           </Link>
         </MenuItem>
+        {/*
         <MenuItem onClick={handleClose}>
           <Link className={classes.linkReset} to='/showcase'>
             Showcase
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          {/* TODO: Route FAQ to FAQ Page...Need to create one */}
           <Link className={classes.linkReset} to='/landing'>
             FAQ
           </Link>
         </MenuItem>
+        */}
       </Menu>
     </Box>
   );

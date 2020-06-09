@@ -27,7 +27,7 @@ const useStyles = makeStyles(() => ({
     marginBottom: '1.6rem',
   },
   heroImage: {
-    width: '85%',
+    width: '75%',
     height: 'auto',
   },
   heroImageWrapper: {
