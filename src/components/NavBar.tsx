@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../echology_logo.png';
 import { brandColors } from '../constants/brand';
 import { Link } from 'react-router-dom';
@@ -63,10 +64,14 @@ const NavBar = () => {
             </Grid>
             {/*
             <Grid item>
-              <h4 className={classes.link}>Showcase</h4>
+              <Link to='/showcase' className={classes.link}>
+                <h4>Showcase</h4>
+              </Link>
             </Grid>
             <Grid item>
-              <h4 className={classes.link}>FAQ</h4>
+              <Link to='/' className={classes.link}>
+                <h4>FAQ</h4>
+              </Link>
             </Grid>
             */}
             <Grid item>
